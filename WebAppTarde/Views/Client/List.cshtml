@@ -1,0 +1,72 @@
+﻿<div class="card">
+    <div class="card-header">
+        <h2>Clientes</h2>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-3">
+                <select name="filtro" class="form-control">
+                    <option value="0">Todos</option>
+                    <option value="ID">ID</option>
+                    <option value="name">Nome</option>
+                    <option value="phone">Telefone</option>
+                </select>
+            </div>
+            <div class="col-6">
+                <input type="text" name="search" placeholder="Busca" class="form-control" />
+            </div>
+            <div class="col-1">
+                <button class="btn btn-primary" type="submit">Pesquisar</button>
+            </div>
+            <div class="col-2">
+                <a href="/Client/Register" class="btn btn-success">Novo Cliente</a>
+            </div>
+        </div>
+        <table class="table table-striped">
+
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Vinicius</td>
+                    <td>16 988210107</td>
+                    <td>
+                        <a href="/Client/Edit/1" class="btn btn-warning">Editar</a>
+                        <a href="/Client/Delete/1" class="btn btn-danger">Excluir</a>
+                        <a href="/Client/Order/1" class="btn btn-info">Lista de compras</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Carol</td>
+                    <td>16 988211230</td>
+                    <td>
+                        <a href="/Client/Edit/2" class="btn btn-warning">Editar</a>
+                        <a href="/Client/Delete/2" class="btn btn-danger">Excluir</a>
+                        <a href="/Client/Order/2" class="btn btn-info">Lista de compras</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Amanda</td>
+                    <td>16 988213549</td>
+                    <td>
+                        <a href="/Client/Edit/3" class="btn btn-warning">Editar</a>
+                        <a href="/Client/Delete/3" class="btn btn-danger">Excluir</a>
+                        <a href="/Client/Order/3" class="btn btn-info">Lista de compras</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
