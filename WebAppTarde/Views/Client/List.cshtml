@@ -1,4 +1,6 @@
-﻿<div class="card">
+﻿@model List<WebAppTarde.Models.ClientViewModel>
+
+<div class="card">
     <div class="card-header">
         <h2>Clientes</h2>
     </div>
@@ -34,38 +36,21 @@
             </thead>
 
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Vinicius</td>
-                    <td>16 988210107</td>
-                    <td>
-                        <a href="/Client/Edit/1" class="btn btn-warning">Editar</a>
-                        <a href="/Client/Delete/1" class="btn btn-danger">Excluir</a>
-                        <a href="/Client/Order/1" class="btn btn-info">Lista de compras</a>
-                    </td>
-                </tr>
 
-                <tr>
-                    <td>2</td>
-                    <td>Carol</td>
-                    <td>16 988211230</td>
-                    <td>
-                        <a href="/Client/Edit/2" class="btn btn-warning">Editar</a>
-                        <a href="/Client/Delete/2" class="btn btn-danger">Excluir</a>
-                        <a href="/Client/Order/2" class="btn btn-info">Lista de compras</a>
-                    </td>
-                </tr>
+                @foreach (var client in Model)
+                {
+                    <tr>
+                        <td>@client.Id</td>
+                        <td>@client.Nome</td>
+                        <td>@client.Telefone</td>
+                        <td>
+                            <a href="/Client/Edit/@client.Id" class="btn btn-warning">Editar</a>
+                            <a href="/Client/Delete/@client.Id" class="btn btn-danger">Excluir</a>
+                            <a href="/Client/Order/@client.Id" class="btn btn-info">Lista de compras</a>
+                        </td>
+                    </tr>
+                }
 
-                <tr>
-                    <td>3</td>
-                    <td>Amanda</td>
-                    <td>16 988213549</td>
-                    <td>
-                        <a href="/Client/Edit/3" class="btn btn-warning">Editar</a>
-                        <a href="/Client/Delete/3" class="btn btn-danger">Excluir</a>
-                        <a href="/Client/Order/3" class="btn btn-info">Lista de compras</a>
-                    </td>
-                </tr>
             </tbody>
         </table>
     </div>

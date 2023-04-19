@@ -1,6 +1,8 @@
-﻿<div class="card">
+﻿@model WebAppTarde.Models.ClientViewModel
+
+<div class="card">
     <div class="card-header">
-        <h2>Cadastro de Clientes</h2>
+        <h2>Editar de Clientes</h2>
     </div>
     <div class="card-body">
         <div class="row">
@@ -9,14 +11,17 @@
             <div class="col-4">
                 <form action="/Client/Save" method="post">
                     <div class="mb-3">
+                        <label for="name" class="form-label">ID</label>
+                        <input type="text" class="form-control" id="name" name="Id" value="@Model.Id" readonly>
+                    </div>
+                    <div class="mb-3">
                         <label for="name" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="name" name="Nome" aria-describedby="emailHelp">
+                        <input type="text" class="form-control" id="name" name="Nome" value="@Model.Nome">
                     </div>
                     <div class="mb-3">
                         <label for="phone" class="form-label">Telefone</label>
-                        <input type="text" class="form-control" id="phone" name="Telefone" aria-describedby="emailHelp">
+                        <input type="text" class="form-control" id="phone" name="Telefone" value="@Model.Telefone">
                     </div>
-
                     <button type="submit" class="btn btn-success">Salvar Client</button>
                 </form>
             </div>
